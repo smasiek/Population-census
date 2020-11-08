@@ -1,14 +1,14 @@
 package com.miloszmomot.census;
 
 public class Pesel {
-    private long pesel;
+    private String pesel;
 
-    public Pesel(long pesel){
+    public Pesel(String pesel){
         this.pesel=pesel;
     }
 
     @Override
     public String toString() {
-        return ""+pesel;
+        return " Pesel: "+pesel;
     }
 }

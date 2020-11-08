@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05a90180-ca1a-43bc-9796-72b124f699ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Deletable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/PeopleIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/PeopleOfLesserPoland.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/PeopleOfPoland.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/PeopleOfSubcarpathia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/PeselFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Searchable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/SurnameFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/NameFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/NameFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Pesel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Pesel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Surname.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miloszmomot/census/Surname.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -45,7 +60,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604674623125</updated>
-      <workItem from="1604674626367" duration="2724000" />
+      <workItem from="1604674626367" duration="20200000" />
+      <workItem from="1604832223192" duration="21300000" />
     </task>
     <servers />
   </component>
@@ -53,9 +69,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1604676551866">
+    <state x="610" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1604854301575">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="610" y="226" key="#com.intellij.ide.util.MemberChooser/1680.-28.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1604676551866" />
+    <state x="610" y="226" key="#com.intellij.ide.util.MemberChooser/1680.-28.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1604854301575" />
+    <state x="396" y="119" key="CommitChangelistDialog2" timestamp="1604858196491">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="396" y="119" key="CommitChangelistDialog2/1680.-28.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1604858196491" />
+    <state x="370" y="180" key="Maven.ArtifactSearchDialog" timestamp="1604853271484">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="370" y="180" key="Maven.ArtifactSearchDialog/1680.-28.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1604853271484" />
+    <state x="536" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1604832226182">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="536" y="349" key="com.intellij.ide.util.TipDialog/1680.-28.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1604832226182" />
+    <state x="916" y="247" key="run.anything.popup" timestamp="1604851671911">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="916" y="247" key="run.anything.popup/1680.-28.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1604851671911" />
   </component>
 </project>
