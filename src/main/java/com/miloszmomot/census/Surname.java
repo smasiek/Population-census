@@ -25,24 +25,30 @@ public class Surname {
         pesels.put(pesel,PeselFactory.getPesel(pesel));
     }
 
-    public void deletePerson(String pesel){
-        pesels.remove(pesel);
-        PeselFactory.deletePeselFromFactory(pesel);
+    public boolean deletePerson(String pesel){
+        try {
+            pesels.remove(pesel);
+            PeselFactory.deletePeselFromFactory(pesel);
+            return true;
+        }catch(RuntimeException e){
+            return false;
+        }
     }
 
-    public void deleteSurname() {
-        deletePesels();
+    public boolean deleteSurname() {
+        return deletePesels();
     }
 
     public void deleteName() {
         deletePesels();
     }
 
-    public void deletePesels(){
+    public boolean deletePesels(){
         for (HashMap.Entry<String, Pesel> entry : pesels.entrySet()) {
             PeselFactory.deletePeselFromFactory(entry.getKey());
             pesels.remove(entry.getKey());
         }
+        return true;
     }
 
     public String searchForPerson(String pesel) {

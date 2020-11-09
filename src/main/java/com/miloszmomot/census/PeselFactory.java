@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class PeselFactory {
     private static final HashMap<String,Pesel> peselByPesel=new HashMap<String, Pesel>();
 
-    public static Pesel getPesel(String pesel){
+    public static Pesel getPesel(String pesel) {
         Pesel newName=(Pesel) peselByPesel.get(pesel);
 
 
@@ -14,7 +14,7 @@ public class PeselFactory {
                 peselByPesel.put(pesel,newName);
                 return newName;
             }else{
-                throw new RuntimeException("This person already exists");
+                throw new RuntimeException("Osoba o takim peselu juz istnieje");
             }
     }
 

@@ -49,6 +49,7 @@ public class SurnameFactory {
                 complexSurname.connectSurnames(createSurname(splitName[i]));
             }
         }
+        surnameBySurname.put(complexSurname.getSurname(),complexSurname);
         complexSurname.addPesel(pesel);
         return complexSurname;
     }
@@ -76,13 +77,17 @@ public class SurnameFactory {
         return surname.contains(" ");
     }
 
-    public void deletePerson(String surname,String pesel){
-        surnameBySurname.get(surname).deletePerson(pesel);
+    public boolean deletePerson(String surname, String pesel){
+        return surnameBySurname.get(surname).deletePerson(pesel);
     }
 
-    public void deleteSurname(String surname) {
-        surnameBySurname.get(surname).deleteSurname();
-        surnameBySurname.remove(surname);
+    public boolean deleteSurname(String surname) {
+        try {
+            surnameBySurname.remove(surname);
+            return surnameBySurname.get(surname).deleteSurname();
+        }catch (NullPointerException e){
+            return false;
+        }
     }
 
     public void deleteName() {
@@ -104,6 +109,7 @@ public class SurnameFactory {
         StringBuilder namesString = new StringBuilder();
         for (HashMap.Entry<String, Surname> entry : surnameBySurname.entrySet()) {
             namesString.append("\n - ");
+            namesString.append(entry.getKey());
             namesString.append(entry.getValue().searchForName());
         }
         return namesString.toString();

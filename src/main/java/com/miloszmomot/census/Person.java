@@ -1,36 +1,31 @@
 package com.miloszmomot.census;
 
-public class Person {
+public class Person{
     private Name name;
 
     public Person(String name,String surname,String pesel){
         this.name=NameFactory.getName(name, surname, pesel);
     }
 
-    /*public Person(String name,String surname,String pesel) {
-        try{
-        this.pesel = PeselFactory.getPesel(pesel);
-        this.name = NameFactory.getName(name);
-        this.surname = SurnameFactory.getSurname(surname);
-        } catch (RuntimeException e) {
-            e.getMessage();
-        }
-    }*/
-
     public String searchForPerson(String surname,String pesel) {
-        return "Person{" +
+        return "Znaleziono:\nPerson{" +
                 name + name.searchForPerson(surname,pesel) +
                 '}';
     }
 
-    public String searchForSurname(String surname) {
-        return "People{" +
-                name + name.searchForSurname(surname) +
-                '}';
+    public boolean searchForSurname(String surname) {
+        try {
+            System.out.println("Znaleziono:\nPeople{" +
+                    name + name.searchForSurname(surname) +
+                    '}');
+            return true;
+        } catch (RuntimeException e){
+          return false;
+        }
     }
 
     public String searchForName() {
-        return "People{" +
+        return "Znaleziono:\nPeople{" +
                 name + name.searchForName() +
                 '}';
     }
@@ -41,12 +36,12 @@ public class Person {
         return name;
     }
 
-    public void deletePerson(String surname,String pesel){
-        this.name.deletePerson(surname,pesel);
+    public boolean deletePerson(String surname, String pesel){
+        return this.name.deletePerson(surname,pesel);
     }
 
-    public void deleteSurname(String surname){
-        this.name.deleteSurname(surname);
+    public boolean deleteSurname(String surname){
+        return this.name.deleteSurname(surname);
     }
 
     public void deleteName(){

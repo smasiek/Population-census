@@ -21,12 +21,12 @@ public class Name {
         return " Name: "+name;
     }
 
-    public void deletePerson(String surname,String pesel){
-        surnames.deletePerson(surname,pesel);
+    public boolean deletePerson(String surname, String pesel){
+        return surnames.deletePerson(surname,pesel);
     }
 
-    public void deleteSurname(String surname) {
-        surnames.deleteSurname(surname);
+    public boolean deleteSurname(String surname) {
+        return surnames.deleteSurname(surname);
     }
 
     public void deleteName() {

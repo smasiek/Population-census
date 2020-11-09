@@ -11,56 +11,32 @@ public class PeopleOfLesserPoland implements Searchable, Deletable, PeopleIterat
     }
 
     public void addPerson(String name, String surname, String pesel) {
-        peopleOfLesserpoland.add(new Person(name, surname, pesel));
-    }
-
-    public void deletePerson(String name, String surname, String pesel) {
-        for (Person person : peopleOfLesserpoland) {
-            if (person.getName().getStringName().equals(name)) {
-                person.deletePerson(surname, pesel);
-            }
-        }
-    }
-
-    public void deleteSurname(String name, String surname) {
-        for (Person person : peopleOfLesserpoland) {
-            if (person.getName().getStringName().equals(name)) {
-                person.deleteSurname(surname);
-            }
+        try {
+            peopleOfLesserpoland.add(new Person(name, surname, pesel));
+        }catch (RuntimeException e){
+            System.out.println(e.getMessage());
         }
     }
 
     public void deleteName(String name) {
-        for (Person person : peopleOfLesserpoland) {
+        for (int i = 0; i < peopleOfLesserpoland.size(); i++) {
+            Person person = peopleOfLesserpoland.get(i);
             if (person.getName().getStringName().equals(name)) {
                 person.deleteName();
-                peopleOfLesserpoland.remove(person);
+                peopleOfLesserpoland.remove(i);
+                i-=1;
             }
         }
     }
 
-    public void searchForPerson(String name, String surname, String pesel) {
+    public boolean searchForName(String name) {
         for (Person person : peopleOfLesserpoland) {
             if (person.getName().getStringName().equals(name)) {
-                person.searchForPerson(surname, pesel);
+                System.out.println(person.searchForName());
+                return true;
             }
         }
-    }
-
-    public void searchForSurname(String name, String surname) {
-        for (Person person : peopleOfLesserpoland) {
-            if (person.getName().getStringName().equals(name)) {
-                person.searchForSurname(surname);
-            }
-        }
-    }
-
-    public void searchForName(String name) {
-        for (Person person : peopleOfLesserpoland) {
-            if (person.getName().getStringName().equals(name)) {
-                person.searchForName();
-            }
-        }
+        return false;
     }
 
     public Iterator createIterator() {
